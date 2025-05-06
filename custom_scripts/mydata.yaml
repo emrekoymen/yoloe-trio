@@ -1,0 +1,11 @@
+path: /home/emrek/Desktop/yoloe_fine_tuning
+train: images/train
+val:   images/val 
+
+# read label names from labelmap.txt to avoid typos
+names:
+  0: #
+  1: PEDESTRIAN_SIDE
+  2: FORKLIFT
+  3: OPERATOR
+

@@ -1,0 +1,26 @@
+# voc_test.yaml
+
+# --- Ensure these are correct ---
+path: /home/emrek/cursor/yoloe/yoloe_test_dataset #!UPDATE THIS!
+train: ImageSets/Main/default.txt # Or a dummy file/path
+val: ImageSets/Main/default.txt # Or your validation set
+test: ImageSets/Main/default.txt
+format: voc
+# --- --- --- --- --- --- --- --- --
+
+# Define class names:
+# Index (0, 1, 2...) MUST match the CLASS ID predicted by your model.
+# Value MUST match the corresponding CLASS NAME in your ground truth XMLs.
+names:
+  0: PEDESTRIAN_SIDE  # Model predicts 0 -> Evaluate against GT 'PEDESTRIAN_SIDE'
+  1: OPERATOR         # Model predicts 1 -> Evaluate against GT 'OPERATOR'
+  2: FORKLIFT         # Model predicts 2 -> Evaluate against GT 'FORKLIFT'
+  # --- Include ALL other ground truth classes below ---
+  # Assign them subsequent indices. They need to be listed so the
+  # loader recognizes them in the GT files, even if the model
+  # won't predict these specific IDs.
+  3: REACH_TRUCK      # Exact name from GT
+  4: ORDER_PICKER     # Exact name from GT
+  5: STACKER          # Exact name from GT
+  # Add any others if they exist in your GT XMLs.
+  # 'background' is usually implicit and not needed here.
